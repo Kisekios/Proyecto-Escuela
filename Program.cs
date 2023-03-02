@@ -2,32 +2,16 @@
 using static System.Console;
 
 
-namespace Etapa1
+namespace CoreEscuela
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var escuela = new Escuelas("Deko Academy", 2020, TiposDeEscuela.Primaria, ciudad: "Bogota", pais: "Colombia");
-            escuela.Pais = "Colombia";
-            escuela.Ciudad = "Bogota";
-            WriteLine(new string('=', 50) + (System.Environment.NewLine) + escuela + (System.Environment.NewLine) + new string('=', 50));
-
-            escuela.Cursos = new Curso[]  {
-                new Curso(){Nombre = "101"},
-                new Curso(){Nombre = "201"},
-                new Curso(){Nombre = "301"}
-            };
-
-
-            WriteLine(new string('=', 50));
-            ImprimirCursos(escuela);
-            WriteLine(new string('=', 50));
-
-            if (true)
-            {
-
-            }
+            var engine = new EscuelaEngine();
+            engine.Inicializar();
+            WriteLine(new string('=', 50) + (System.Environment.NewLine) + engine.Escuela + (System.Environment.NewLine) + new string('=', 50));
+            ImprimirCursos(engine.Escuela); 
         }
 
         private static void ImprimirCursos(Escuelas escuela)

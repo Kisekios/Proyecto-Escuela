@@ -1,6 +1,6 @@
 namespace CoreEscuela.Entidades
 {
-    class Escuelas
+    public class Escuelas
     {
         string nombre = "";
         public string Nombre
@@ -13,8 +13,8 @@ namespace CoreEscuela.Entidades
         public string Pais { get; set; } = "";
         public string Ciudad { get; set; } = "";
         public TiposDeEscuela TipoEscuela { get; set; }
-        
-        public Curso[] Cursos { get; set; }
+
+        public List<Curso> Cursos { get; set; }
         public Escuelas(string nombre, int año) => (Nombre, AñoDeCreacion) = (nombre, año);
         public Escuelas(string nombre, int año, TiposDeEscuela tipo, string pais = "", string ciudad = "")
         {

@@ -1,5 +1,3 @@
-using System;
-
 namespace CoreEscuela.Entidades
 {
     public class Curso
@@ -8,6 +6,6 @@ namespace CoreEscuela.Entidades
         public string Nombre { get; set; } = "";
         public TiposJornada Jornada { get; set; }
 
-        public Curso()=>IDunico = Guid.NewGuid().ToString();
+        public Curso() => IDunico = Guid.NewGuid().ToString();
     }
 }
