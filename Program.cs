@@ -1,5 +1,7 @@
 ﻿using CoreEscuela.Entidades;
+using CoreEscuela.Util;
 using static System.Console;
+
 
 
 namespace CoreEscuela
@@ -9,22 +11,23 @@ namespace CoreEscuela
         static void Main(string[] args)
         {
             var engine = new EscuelaEngine();
+            Printer.Sonido(hz: 10000, veces: 2, tiempo: 2000);
             engine.Inicializar();
-            WriteLine(new string('=', 50) + (System.Environment.NewLine) + engine.Escuela + (System.Environment.NewLine) + new string('=', 50));
-            ImprimirCursos(engine.Escuela); 
+            WriteLine(new string('=', 45) + (System.Environment.NewLine) + engine.Escuela + (System.Environment.NewLine) + new string('=', 45));
+            ImprimirCursos(engine.Escuela);
         }
 
         private static void ImprimirCursos(Escuelas escuela)
         {
-            WriteLine(new string('=', 50));
-            WriteLine("Cursos de la escuela");
-            WriteLine(new string('=', 50));
+            Printer.EscribirTitulo("Cursos Habiles");
             if (escuela?.Cursos != null)
             {
+                Printer.DibujarLinea(53);
                 foreach (var curso in escuela.Cursos)
                 {
                     WriteLine($"Nombre: {curso.Nombre}, ID: {curso.IDunico}");
                 }
+                Printer.DibujarLinea(53);
             }
         }
     }

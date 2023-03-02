@@ -6,10 +6,10 @@ namespace CoreEscuela
     public class EscuelaEngine
     {
         public Escuelas Escuela { get; set; }
-        public EscuelaEngine()
+        /* public EscuelaEngine()
         {
-
-        }
+            
+        } */
         public void Inicializar(){
             Escuela = new Escuelas("Deko Academy", 2020, TiposDeEscuela.Primaria, ciudad: "Bogota", pais: "Colombia");
 
