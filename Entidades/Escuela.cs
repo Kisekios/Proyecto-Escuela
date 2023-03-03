@@ -2,6 +2,7 @@ namespace CoreEscuela.Entidades
 {
     public class Escuelas
     {
+        public string IDunico {get; private set;} = Guid.NewGuid().ToString();
         string nombre = "";
         public string Nombre
         {

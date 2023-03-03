@@ -1,7 +1,7 @@
 ﻿using CoreEscuela.Entidades;
 using CoreEscuela.Util;
 using static System.Console;
-
+using CoreEscuela.Otra;
 
 
 namespace CoreEscuela
@@ -11,7 +11,7 @@ namespace CoreEscuela
         static void Main(string[] args)
         {
             var engine = new EscuelaEngine();
-            Printer.Sonido(hz: 10000, veces: 2, tiempo: 2000);
+            Printer.Sonido(hz: 500, veces: 1, tiempo: 500);
             engine.Inicializar();
             WriteLine(new string('=', 45) + (System.Environment.NewLine) + engine.Escuela + (System.Environment.NewLine) + new string('=', 45));
             ImprimirCursos(engine.Escuela);
